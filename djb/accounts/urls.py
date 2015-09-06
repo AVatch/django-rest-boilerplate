@@ -3,10 +3,24 @@ from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
 from rest_framework.authtoken import views as rest_views
 
-import views
+from .views import *
 
 # API endpoints
-urlpatterns = format_suffix_patterns([])
+urlpatterns = format_suffix_patterns([
+
+  url(r'^accounts$',
+      AccountListViewHandler.as_view(),
+      name='account-list'),
+
+  url(r'^accounts/create$',
+      AccountCreateViewHandler.as_view(),
+      name='account-create'),
+
+  url(r'^accounts/(?P<pk>[0-9]+)$',
+        AccountDetailViewHandler.as_view(),
+        name='account-detail'),
+
+])
 
 # Get the auth token for the user
 urlpatterns += [
