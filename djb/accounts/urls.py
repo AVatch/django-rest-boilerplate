@@ -20,6 +20,10 @@ urlpatterns = format_suffix_patterns([
         AccountDetailViewHandler.as_view(),
         name='account-detail'),
 
+  url(r'^me$',
+        MeDetailViewHandler.as_view(),
+        name='me'),
+
 ])
 
 # Get the auth token for the user
