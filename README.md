@@ -10,19 +10,19 @@ This is intended to be compatible with an AngularJS Boilerplate Code and Ionic B
 ### Setup
 1. Create a virtual env
 ```$ virtualenv env```
-2. Source and install the dependencies
+2. Source the environment
 ```$ source env/bin/activate```
+3. Install the dependencies
 ```$(env) pip install -r requirements.txt```
-3. Sync the Database
+4. Switch to the django project
 ```$(env) cd drb```
+5. Sync the Database
 ```$(env) python manage.py migrate```
-4. Create a superuser object
+6. Create a superuser object
 ```$(env) python manage.py createsuperuser```
-5. Run the server
+7. Run the server
 ```$(env) python manage.py runserver```
 
 
 ### Endpoints
-Currently there are two main endpoints
-```/admin```
-```/api/v1```
+Currently there are two main endpoints ```/admin``` and ```/api/v1```
