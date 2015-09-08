@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8100',
+)
 
 # Application definition
 
@@ -42,6 +45,7 @@ CORE_APPS = (
 THIRD_PARTY_APPS = (
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
 )
 
 APPS = (
@@ -59,6 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 )
 
 ROOT_URLCONF = 'djb.urls'
