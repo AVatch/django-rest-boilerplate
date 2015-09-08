@@ -26,7 +26,7 @@ class AccountSerializer(serializers.ModelSerializer):
     # we make email read only since it is the unique identifier
     # for the account. To update email and password implement
     # a proper update flow
-    email = serializers.BooleanField(read_only=True)
+    email = serializers.CharField(read_only=True)
     is_admin = serializers.BooleanField(read_only=True)
     # Demonstrate a dynamic call in the serializer
     full_name = serializers.SerializerMethodField()
