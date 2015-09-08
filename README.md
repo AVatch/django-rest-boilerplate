@@ -1,6 +1,9 @@
 # django-rest-boilerplate
 A Django + REST API Boilerplate code with a custom user object
 
+### Pairs with the following repos
+1. [AngularJS REST Boilerplate](https://github.com/AVatch/angularjs-rest-boilerplate)
+
 ### Motivation
 This is a boilerplate template for a Django REST framework which implements a custom AbstractBaseUser
 with support for Django Admin and basic class based generic serializers and views for viewing the account object.
